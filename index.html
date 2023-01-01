@@ -12,50 +12,99 @@
     <!-- end font -->
     <title>Dokumen Terverifikasi</title>
     <style>
-        body{
-            background-color: #043453;
-            margin: 0;
+        @media only screen and (max-width: 600px) {
+            body{
+                background-color: #043453;
+                margin: 0;
+            }
+
+            .logo{
+                margin-top: 10vh;
+                text-align: center;
+            }
+
+            .logo img{
+                width: 7rem;
+            }
+
+            .bg-message{
+                background-color: #45B155;
+                padding: 1rem 0;
+                margin: 3rem 0;
+            }
+
+            .message{
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                color: white;
+                font-size: 0.9rem;
+                
+                width: 80vw;
+                padding: 1.5rem;
+                text-align: center;
+                margin: auto;
+            }
+
+            .footer{
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                color: white;
+                font-size: 0.6rem;
+                word-spacing: 2px;
+                
+                width: 70vw;
+                text-align: center;
+                margin: auto;
+            }
         }
 
-        .logo{
-            margin-top: 10vh;
-            text-align: center;
-        }
+        @media only screen and (min-width: 600px) {
+            body{
+                background-color: #043453;
+                margin: 0;
+            }
 
-        .logo img{
-            width: 9rem;
-        }
+            .logo{
+                margin-top: 10vh;
+                text-align: center;
+            }
 
-        .bg-message{
-            background-color: #45B155;
-            padding: 1rem 0;
-            margin: 3rem 0;
-        }
+            .logo img{
+                width: 9rem;
+            }
 
-        .message{
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 700;
-            color: white;
-            font-size: 1.6rem;
-            
-            width: 50vw;
-            text-align: center;
-            margin: auto;
-        }
+            .bg-message{
+                background-color: #45B155;
+                padding: 1rem 0;
+                margin: 3rem 0;
+            }
 
-        .footer{
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 400;
-            color: white;
-            font-size: 1.2rem;
-            word-spacing: 2px;
-            
-            width: 40vw;
-            text-align: center;
-            padding-top: 4rem;
-            padding-bottom: 4rem;
-            margin: auto;
+            .message{
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                color: white;
+                font-size: 1.6rem;
+                
+                width: 50vw;
+                text-align: center;
+                margin: auto;
+            }
+
+            .footer{
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                color: white;
+                font-size: 1.2rem;
+                word-spacing: 2px;
+                
+                width: 40vw;
+                text-align: center;
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+                margin: auto;
+            }
         }
+       
     </style>
 </head>
 <body>
@@ -69,9 +118,11 @@
         </div>
     </div>
 
-    <div class="footer">
-        BADAN PENGURUS HARIAN IKATAN MAHASISWA LAHAT PERIODE 2021 - 2022
-    </div>
-
+    <div class="footer" id="year"></div>
+    <script>
+        var today = new Date();
+        var year = "BADAN PENGURUS HARIAN IKATAN MAHASISWA LAHAT PERIODE "+today.getFullYear() + " - "+ (today.getFullYear()+1);
+        document.getElementById("year").innerHTML = year;
+    </script>
 </body>
 </html>
